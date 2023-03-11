@@ -39,7 +39,3 @@ class Test_matchConfirmedCases:
         data_frame = pandas.DataFrame(data=list_of_countries, columns=['each_cn','total_confirmed_Cases'])
         print(data_frame.head(10))
         assert global_confirmed_Cases == cn_total_confirmedcases, " Total cofirmed cases not matached"
-
-
-
-
