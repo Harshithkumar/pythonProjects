@@ -10,8 +10,8 @@ def test_status_code():
 @pytest.mark.code
 def test_check_content_type():
     res = requests.get('http://api.zippopotam.us/us/90210')
-    print("Content Type Value: ",res.headers["Content-Type"])
     assert res.headers["Content-Type"] == "application/json"
+    print("\n Content Type Value: ",res.headers["Content-Type"])
 
 @pytest.mark.code
 def test_country_value():
