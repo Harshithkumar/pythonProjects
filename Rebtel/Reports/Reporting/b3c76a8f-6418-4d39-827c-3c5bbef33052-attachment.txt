@@ -1,0 +1,8 @@
+Scrolling from 383 and 1817  location
+Scrolling to 383 and 273 location values
+Country name is :  Brunei
+Scrolled 7 times
+clickng on the the flag to open the cn info
+BRUNEI TITLE NAME =  Nation of Brunei, Abode of Peace
+BRUNEI COMMON NAME =  Brunei
+BRUNEI REGION NAME =  Asia

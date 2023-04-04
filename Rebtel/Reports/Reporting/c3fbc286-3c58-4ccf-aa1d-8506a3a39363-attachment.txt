@@ -1,0 +1,1 @@
+[31mCRITICAL[0m Utils.custom_logger:custom_logger.py:17 VENEZUELA Flag element is not displayed or flag is missing!!

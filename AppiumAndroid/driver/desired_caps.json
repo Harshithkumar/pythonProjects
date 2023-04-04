@@ -1,0 +1,12 @@
+{
+  "platformName": "android",
+  "uuid": "RZ8N82K8STY",
+  "deviceName": "Samsung Galaxy Note 20",
+  "appPackage": "com.tivo.cableco",
+  "appActivity": "com.tivo.android.screens.setup.SplashActivity",
+  "noReset": "True",
+  "fullReset": "False",
+  "ignoreHiddenApiPolicyError": "False",
+  "newCommandTimeout": 1000,
+  "enableMultiWindows": true
+}
