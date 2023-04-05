@@ -10,6 +10,9 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 class BaseMethods:
 
+    screenshot_filepath = '/Users/hakumar/pythonProject/AppiumAndroid/Screenshots/'
+    log_filepath = "/Users/hakumar/pythonProject/AppiumAndroid/Logs/app.log"
+
     def __init__(self, driver):
         self.driver = driver
 
@@ -27,15 +30,15 @@ class BaseMethods:
         element = self.find_element_by_id(locator)
         element.click()
 
-    def screenshot_on_failure(self):
+    def screenshot_on_failure(self, filename=''):
         now = datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
-        new_file = self.driver.save_screenshot(f"screenshots_{now}.png")
-        open(new_file)
+        self.driver.save_screenshot(self.screenshot_filepath + f"{filename}_{now}.png")
 
     def get_logger(self):
+        logging.basicConfig(filename=self.log_filepath)
         logger = logging.getLogger(__name__)
         logger.setLevel(logging.DEBUG)
-        ch = logging.FileHandler(r'logs/app.log', mode='w')
+        ch = logging.FileHandler(r''f'{self.log_filepath}', mode='w')
         ch.setLevel(logging.DEBUG)
         formatter = logging.Formatter('%(asctime)s - %(levelname)s: %(message)s', '%m/%d/%Y %I:%M:%S %p')
         ch.setFormatter(formatter)

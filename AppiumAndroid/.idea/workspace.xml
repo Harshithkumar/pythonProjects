@@ -5,27 +5,17 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90a71ef2-9769-409c-b3f8-3298ac3a3261" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/AppiumAndroid.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/driver/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/driver/base_class.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/driver/desired_caps.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/WTW_Page.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mobile/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/archive/output_1680583254.7677922.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/archive/output_1680583318.151125.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/base_tests.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/logs/app.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/output.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/pytest_html_report.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/test_WTW.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/driver/base_class.py" beforeDir="false" afterPath="$PROJECT_DIR$/driver/base_class.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/WTW_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/WTW_Page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/archive/output_1680583254.7677922.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/archive/output_1680583318.151125.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/logs/app.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/output.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/pytest_html_report.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/screenshots_2023-04-04_12-52-59.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/test_WTW.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/test_WTW.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -66,7 +56,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/driver" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyIntegratedToolsModulesConfigurable" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
@@ -108,22 +98,6 @@
       <option name="MODULE_MODE" value="false" />
       <option name="REDIRECT_INPUT" value="false" />
       <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for mobile.WTW_Page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="AppiumAndroid" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mobile/screen_pages" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;mobile.WTW_Page&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
     <configuration name="pytest for mobile.WTW_Page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
@@ -206,13 +180,29 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_WTW.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="AppiumAndroid" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/tests/test_WTW.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest for test_WTW.Test_WTW.test_cast_icon" />
+        <item itemvalue="Python tests.pytest in test_WTW.py" />
+        <item itemvalue="Python tests.pytest for test_WTW.Test_WTW" />
         <item itemvalue="Python tests.pytest for test_WTW.Test_WTW.test_cast_icon_on_WTW" />
         <item itemvalue="Python tests.pytest for test_WTW.Test_WTW.test_WTW_icon" />
-        <item itemvalue="Python tests.pytest for mobile.WTW_Page" />
-        <item itemvalue="Python tests.pytest for mobile.WTW_Page" />
       </list>
     </recent_temporary>
   </component>
@@ -241,21 +231,5 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/driver/base_class.py</url>
-          <line>31</line>
-          <option name="timeStamp" value="14" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/mobile/WTW_Page.py</url>
-          <line>10</line>
-          <option name="timeStamp" value="15" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
