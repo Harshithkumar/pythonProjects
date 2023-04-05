@@ -26,3 +26,7 @@ def setup(request):
     def teardown():
         request.instance.driver.quit()
     request.addfinalizer(teardown)
+
+@pytest.hookimpl(tryfirst=True)
+def pytest_configure(config):
+    config.option.htmlpath = '/Users/hakumar/pythonProject/AppiumAndroid/report/report.html'
