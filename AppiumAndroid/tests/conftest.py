@@ -8,6 +8,7 @@ from appium import webdriver
 def setup(request):
     global driver
     capabilities = {
+        "automationName": 'UiAutomator2',
         "platformName": "android",
         "uuid": "RZ8N82K8STY",
         "deviceName": "Samsung Galaxy Note 20",
@@ -19,7 +20,7 @@ def setup(request):
         "newCommandTimeout": 1000,
         "enableMultiWindows": True
     }
-    url = 'http://0.0.0.0:4723/wd/hub'
+    url = 'http://0.0.0.0:4723'
     request.instance.driver = webdriver.Remote(url, capabilities)
     request.instance.driver.implicitly_wait(20)
 
