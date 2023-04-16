@@ -4,7 +4,7 @@ def pal(str):
         return True
 
 
-str = input("Enter paindrome string ")
+str = 'MADAM'
 if pal(str):
     print("Given string is palindrome")
 else:

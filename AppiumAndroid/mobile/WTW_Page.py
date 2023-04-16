@@ -1,5 +1,6 @@
 from driver.base_class import BaseMethods
 
+
 class Page_WTW_Screen(BaseMethods):
     LOC_ID_CAST_ICON = "com.tivo.cableco:id/tivoCastButton"
 
