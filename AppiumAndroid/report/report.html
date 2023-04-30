@@ -253,7 +253,6 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
 }
 </script>
     <h1>report.html</h1>
-    <p>Report generated on 16-Apr-2023 at 15:42:50 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v3.2.0</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -272,7 +271,6 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <td>Python</td>
         <td>3.8.10</td></tr></table>
     <h2>Summary</h2>
-    <p>1 tests ran in 21.34 seconds. </p>
     <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="passed">1 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filterTable(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
@@ -288,9 +286,18 @@ function filterTable(elem) { // eslint-disable-line no-unused-vars
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">tests/test_WTW.py::Test_WTW::test_cast_icon</td>
-          <td class="col-duration">21.27</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
-            <div class="log"> ------------------------------Captured stdout call------------------------------ <br/>******YES ALL GOOD, PASSED!!
-<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     driver.base_class:WTW_Page.py:12 ******YES ALL GOOD, PASSED!!<br/></div></td></tr></tbody></table></body></html>
+            <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>[Appium] Welcome to Appium v2.0.0-beta.64
+[Appium] Attempting to load driver uiautomator2...
+[debug] [Appium] Requiring driver at /Users/hakumar/.appium/node_modules/appium-uiautomator2-driver
+[debug] [Appium] Error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+[debug] [Appium]     at Server.setupListenHandle [as _listen2] (node:net:1812:16)
+[debug] [Appium]     at listenInCluster (node:net:1860:12)
+[debug] [Appium]     at doListen (node:net:2009:7)
+[debug] [Appium]     at processTicksAndRejections (node:internal/process/task_queues:83:21)
+<br/> -----------------------------Captured stderr setup------------------------------ <br/>[HTTP] Could not start REST http interface listener. The requested port may already be in use. Please make sure there is no other instance of this server running already.
+[Appium] Could not configure Appium server. It&#x27;s possible that a driver or plugin tried to update the server and failed. Original error: listen EADDRINUSE: address already in use 0.0.0.0:4723
+<br/> ------------------------------Captured stdout call------------------------------ <br/>******YES ALL GOOD, PASSED!!
+<br/> -------------------------------Captured log call-------------------------------- <br/>INFO     driver.base_class:WTW_Page.py:13 ******YES ALL GOOD, PASSED!!<br/></div></td></tr></tbody></table></body></html>
