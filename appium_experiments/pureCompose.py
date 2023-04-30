@@ -19,7 +19,7 @@ caps = {
     "disableIdLocatorAutocompletion": True,
 }
 
-driver = webdriver.Remote("http://0.0.0.0:4723", caps)
+driver = webdriver.Remote("http://127.0.0.1:4723", caps)
 print(driver.is_app_installed('com.jetpack.tesproject'))
 driver.start_activity('com.jetpack.tesproject', 'com.jetpack.tesproject.MainActivity')
 
