@@ -5,7 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90a71ef2-9769-409c-b3f8-3298ac3a3261" name="Default Changelist" comment="new changes">
+      <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-16_16-46-26.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-16_16-50-34.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-26_14-09-48.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-26_14-10-28.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-26_14-12-05.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-26_14-18-55.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-26_14-20-46.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/driver/appium_driver.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/base_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/base_tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,8 +27,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Setup Script" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
@@ -46,14 +58,22 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/report" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
   </component>
   <component name="PyConsoleOptionsProvider">
     <option name="myPythonConsoleState">
       <console-settings module-name="AppiumAndroid" is-module-sdk="true">
+        <envs>
+          <env key="SHELL" value="/bin/bash" />
+        </envs>
         <option name="myUseModuleSdk" value="true" />
         <option name="myModuleName" value="AppiumAndroid" />
+        <option name="myEnvs">
+          <map>
+            <entry key="SHELL" value="/bin/bash" />
+          </map>
+        </option>
       </console-settings>
     </option>
   </component>
@@ -71,6 +91,27 @@
     </key>
   </component>
   <component name="RunManager" selected="Python tests.pytest for test_WTW.Test_WTW.test_cast_icon">
+    <configuration name="conftest" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="AppiumAndroid" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/tests/conftest.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="AppiumAndroid" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -92,22 +133,6 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for mobile.WTW_Page" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="AppiumAndroid" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/mobile/screen_pages" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;mobile.WTW_Page&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest for test_WTW.Test_WTW" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="AppiumAndroid" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -121,22 +146,6 @@
       <option name="_new_parameters" value="&quot;&quot;" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
       <option name="_new_target" value="&quot;test_WTW.Test_WTW&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
-    <configuration name="pytest for test_WTW.Test_WTW.test_WTW_icon" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="AppiumAndroid" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_WTW.Test_WTW.test_WTW_icon&quot;" />
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
@@ -156,22 +165,6 @@
       <option name="_new_targetType" value="&quot;PYTHON&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="pytest for test_WTW.Test_WTW.test_cast_icon_on_WTW" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
-      <module name="AppiumAndroid" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/tests" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="_new_keywords" value="&quot;&quot;" />
-      <option name="_new_parameters" value="&quot;&quot;" />
-      <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;test_WTW.Test_WTW.test_cast_icon_on_WTW&quot;" />
-      <option name="_new_targetType" value="&quot;PYTHON&quot;" />
-      <method v="2" />
-    </configuration>
     <configuration name="pytest in test_WTW.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
       <module name="AppiumAndroid" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -188,19 +181,43 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
+    <configuration name="pytest in test_cmd.py" type="tests" factoryName="py.test" temporary="true" nameIsGenerated="true">
+      <module name="AppiumAndroid" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Logs" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="_new_keywords" value="&quot;&quot;" />
+      <option name="_new_parameters" value="&quot;&quot;" />
+      <option name="_new_additionalArguments" value="&quot;&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/Logs/test_cmd.py&quot;" />
+      <option name="_new_targetType" value="&quot;PATH&quot;" />
+      <method v="2" />
+    </configuration>
+    <list>
+      <item itemvalue="Python.main" />
+      <item itemvalue="Python tests.pytest for test_WTW.Test_WTW" />
+      <item itemvalue="Python tests.pytest for test_WTW.Test_WTW.test_cast_icon" />
+      <item itemvalue="Python tests.pytest in test_WTW.py" />
+      <item itemvalue="Python tests.pytest in test_cmd.py" />
+      <item itemvalue="Python.conftest" />
+    </list>
     <recent_temporary>
       <list>
         <item itemvalue="Python tests.pytest for test_WTW.Test_WTW.test_cast_icon" />
+        <item itemvalue="Python tests.pytest in test_cmd.py" />
         <item itemvalue="Python tests.pytest in test_WTW.py" />
+        <item itemvalue="Python.conftest" />
         <item itemvalue="Python tests.pytest for test_WTW.Test_WTW" />
-        <item itemvalue="Python tests.pytest for test_WTW.Test_WTW.test_cast_icon_on_WTW" />
-        <item itemvalue="Python tests.pytest for test_WTW.Test_WTW.test_WTW_icon" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
-    <configuration>$USER_HOME$/.subversion</configuration>
+    <configuration>$PROJECT_DIR$/../.subversion</configuration>
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -245,7 +262,14 @@
       <option name="project" value="LOCAL" />
       <updated>1680689137622</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="new changes">
+      <created>1681643274381</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1681643274381</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -262,6 +286,9 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <ignored-roots>
+      <path value="$PROJECT_DIR$" />
+    </ignored-roots>
     <MESSAGE value="new changes" />
     <option name="LAST_COMMIT_MESSAGE" value="new changes" />
   </component>

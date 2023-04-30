@@ -1,5 +1,4 @@
 import pytest
-from tests.conftest import setup
 from mobile.WTW_Page import Page_WTW_Screen
 
 
