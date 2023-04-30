@@ -1,9 +1,10 @@
 from appium import webdriver
 import subprocess
+import allure
 
 subprocess.Popen('Appium', shell=True)
 
-
+allure.description("Check for capabalites")
 caps = {
     "platformName": "android",
     "appium:automationName": "UiAutomator2",
@@ -19,6 +20,7 @@ caps = {
     "disableIdLocatorAutocompletion": True,
 }
 
+allure.severity("S1")
 driver = webdriver.Remote("http://127.0.0.1:4723", caps)
 print(driver.is_app_installed('com.jetpack.tesproject'))
 driver.start_activity('com.jetpack.tesproject', 'com.jetpack.tesproject.MainActivity')
@@ -29,7 +31,7 @@ LOC_CLASS = 'android.widget.TextView'
 LOC_INSIDE_PURE_COMPOSE_IMAGE = 'composableImageView'
 LOC_INSIDE_PURE_COMPOSE_IMAGE_TEXT = 'Zanzibar Photo'
 
-
+allure.tag("Check for capabalite")
 if driver.find_element_by_id(LOC_PURE_COMPOSE).is_displayed():
     driver.find_element_by_id(LOC_PURE_COMPOSE).click()
     print("********** Clicked on PURE COMPOSE**********")
