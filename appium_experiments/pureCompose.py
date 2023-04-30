@@ -3,6 +3,7 @@ import subprocess
 
 subprocess.Popen('Appium', shell=True)
 
+
 caps = {
     "platformName": "android",
     "appium:automationName": "UiAutomator2",
