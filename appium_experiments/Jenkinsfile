@@ -28,7 +28,7 @@ pipeline {
     post {
             always {
                 script {
-                   allure includeProperties: false, jdk: '', results: [[path: 'allure-results']]
+                   allure includeProperties: false, jdk: '', results: [[path: 'appium_experiments/allure-results']]
                 }
             }
     }
