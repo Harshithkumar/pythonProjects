@@ -5,6 +5,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="90a71ef2-9769-409c-b3f8-3298ac3a3261" name="Default Changelist" comment="new changes">
+
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Logs/app.log" beforeDir="false" afterPath="$PROJECT_DIR$/Logs/app.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mobile/WTW_Page.py" beforeDir="false" afterPath="$PROJECT_DIR$/mobile/WTW_Page.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sandbox/compose_appium.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Sandbox/compose_appium.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Sandbox/palindrome_string.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Sandbox/palindrome_string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../appium_experiments/mixComposeXML.py" beforeDir="false" afterPath="$PROJECT_DIR$/../appium_experiments/mixComposeXML.py" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-16_16-46-26.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-16_16-50-34.png" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/Screenshots/passed_cast_icon_2023-04-26_14-09-48.png" afterDir="false" />
@@ -18,6 +27,7 @@
       <change beforePath="$PROJECT_DIR$/report/report.html" beforeDir="false" afterPath="$PROJECT_DIR$/report/report.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/base_tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/base_tests.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/tests/conftest.py" beforeDir="false" afterPath="$PROJECT_DIR$/tests/conftest.py" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +69,8 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+
+    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
     <property name="settings.editor.selected.configurable" value="PyConsoleConfigurable.Python Console" />
   </component>
   <component name="PyConsoleOptionsProvider">
