@@ -6,7 +6,7 @@ on: [push]
 jobs:
   lint:
 
-    runs-on: ubuntu-latest
+    runs-on: macos-latest
     strategy:
       matrix:
         python-version: [3.8]
@@ -29,6 +29,4 @@ jobs:
         working-directory: ./appium_experiments
         run: |
           pip install -r requirements.txt
-          appium --address 127.0.0.1 --port 4723
-          gnome-terminal --tab
           python3 pureCompose.py
