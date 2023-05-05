@@ -25,9 +25,10 @@ jobs:
             npm install -g appium@next
             appium -v
             appium driver install uiautomator2
-            appium
       - name: Install dependencies
         working-directory: ./appium_experiments
         run: |
           pip install -r requirements.txt
+          appium --address 127.0.0.1 --port 4723
+          gnome-terminal --tab
           python3 pureCompose.py
