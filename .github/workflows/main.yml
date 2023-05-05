@@ -18,7 +18,14 @@ jobs:
         with:
           python-version: ${{ matrix.python-version }}
       - name: Install and Run Appium Server
-        uses: moatazeldebsy/appium-server-gitHub-action@V1.0.4
+      - uses: actions/setup-node@v2
+        with:
+          node-version: '20.0.0'
+      - run: |
+            npm install -g appium@next
+            appium -v
+            appium driver install uiautomator2
+            appium &>/dev/null &
       - name: Install dependencies
         working-directory: ./appium_experiments
         run: |
