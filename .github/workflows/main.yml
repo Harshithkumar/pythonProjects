@@ -25,7 +25,7 @@ jobs:
             npm install -g appium@next
             appium -v
             appium driver install uiautomator2
-            appium &>/dev/null &
+            appium
       - name: Install dependencies
         working-directory: ./appium_experiments
         run: |
