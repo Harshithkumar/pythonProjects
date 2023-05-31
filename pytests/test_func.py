@@ -8,7 +8,7 @@ def test_one_plus_one():
 
 # ==========================================
 
-@pytest.mark.interger
+@pytest.mark.negative
 def test_one_minus_one():
     assert 5 - 5 == 0
 
@@ -18,8 +18,9 @@ def test_one_minus_one():
 @pytest.mark.zero
 def test_zero_div():
     with pytest.raises(ZeroDivisionError) as e:
-        num = 2 / 0
-        assert 'divison by 100' in str(e.value)
+       num= 2 / 0
+    assert 'division by zero' in str(e.value)  #No need of assertion but simply doing it it check if "division by zero"
+    # is in e.value stack trace.
 
 
 # ---------
