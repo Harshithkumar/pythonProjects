@@ -7,16 +7,26 @@
 # print(S2)
 
 
+# Python program to find second largest number in a list
+# list of numbers - length of
+# list should be at least 2
+list1 = [10, 20, 4, 45, 99]
 
+mx = max(list1[0], list1[1])
+secondmax = min(list1[0], list1[1])
+n = len(list1)
+for i in range(2, n):
+    if list1[i] > mx:
+        secondmax = mx
+        mx = list1[i]
+    elif list1[i] > secondmax and list1[i] != mx:
+        secondmax = list1[i]
+    elif mx == secondmax and list1[i] != secondmax:
+        secondmax = list1[i]
 
-S1 = [4,6,8,2,9]
-print()
-S2 = S1[0]
-for i in range(len(S1)):
-    if S1[i] > S2:
-        S2 = S1[i]
-#print(S2)
-print(sorted(S1)[-2])     # second_largest item in the list
+print("Second highest number is : ",str(secondmax))
+
+#print(sorted(S1)[-2])     # second_largest item in the list
 
 
 #https://www.geeksforgeeks.org/python-program-to-find-second-largest-number-in-a-list/
