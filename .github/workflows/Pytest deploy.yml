@@ -31,6 +31,11 @@ jobs:
     - name: Install dependencies
       run: pip install -r requirement.txt
 
+    # - name: Prepare Allure history # Step to prepare Allure history directory
+    #   run: |
+    #     cd ..
+    #     mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
+
     - name: Run Pytest tests
       run: pytest --alluredir=Reports pytests/test_fixturesvalues.py
 
@@ -59,3 +64,11 @@ jobs:
         allure_report: allure-report
         allure_history: allure-history
         keep_reports: 20
+        
+    - name: Deploy Allure report to GitHub Pages # Step to deploy Allure report to GitHub Pages
+      if: always() # Execute even if previous steps fail
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        #github_token: ${{ secrets.GITHUB_TOKEN }} # Provide the GitHub token for authentication
+        publish_branch: add_requirements # Specify the branch to publish the report to
+        publish_dir: allure-history # Specify the directory containing the report
