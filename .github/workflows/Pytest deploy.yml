@@ -32,4 +32,4 @@ jobs:
       run: pip install -r requirement.txt
 
     - name: Run Pytest tests
-      run: pytest pytests/test_fixturesvalues.py
+      run: pytest --alluredir=Reports pytests/test_fixturesvalues.py
