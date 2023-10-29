@@ -37,7 +37,7 @@ jobs:
     #     mkdir -p ${{ vars.ALLURE_RESULTS_PATH }}
 
     - name: Run Pytest tests
-      run: pytest --alluredir=Reports pytests/test_fixturesvalues.py
+      run: pytest --alluredir=allure-results pytests/test_fixturesvalues.py
 
     # - name: Generate allure-results
     #   uses: actions/upload-artifact@master
