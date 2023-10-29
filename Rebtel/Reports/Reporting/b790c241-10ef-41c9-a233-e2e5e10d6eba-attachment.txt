@@ -1,7 +1,0 @@
-Scrolling from 383 and 1817  location
-Scrolling to 383 and 273 location values
-Country name is :  Greece
-Scrolled 15 times
-Greece flag element clicked
-GREECE TITLE is : Hellenic Republic
-Verifying greece common name
