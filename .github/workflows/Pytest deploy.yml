@@ -1,0 +1,35 @@
+name:
+  Sanity Job
+ 
+  # Controls when the workflow will run
+on:
+  # Triggers the workflow every 5 minutes
+  # schedule:
+  #   - cron: "*/1 * * * *"
+  push:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v2
+      
+    # - name: Set HEADLESS environment variable (headless run)
+    #   run: echo "HEADLESS=true" >> $GITHUB_ENV
+
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.x
+    - name: Upgrade pip
+      run: |
+        python -m pip install --upgrade pip
+        pip --version
+    
+    - name: Install dependencies
+      run: pip install -r requirements.txt
+
+    - name: Run Pytest tests
+      run: pytest pytests/test_fixturesvalues.py
