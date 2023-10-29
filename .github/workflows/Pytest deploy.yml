@@ -33,3 +33,18 @@ jobs:
 
     - name: Run Pytest tests
       run: pytest --alluredir=Reports pytests/test_fixturesvalues.py
+
+    - name: Generate allure-results
+      uses: actions/upload-artifact@master
+      with:
+        name: allure-results
+        path: Reports
+        retention-days: 20
+        
+    - name: Get Allure history
+      uses: actions/checkout@v2
+      if: always()
+      continue-on-error: true
+      with:
+        ref: gh-pages
+        path: gh-pages
