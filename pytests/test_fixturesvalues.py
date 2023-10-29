@@ -1,5 +1,6 @@
 import pytest
 
+
 @pytest.mark.skipif(False, reason="this fails")
 def test_module_1(local_testing):
     assert 100 % local_testing == 0
@@ -9,7 +10,7 @@ def test_module_1(local_testing):
 @pytest.mark.order(2)  # inroder to excute , pytest-order package has been added a plugin.
 def test_modular_2(local_testing):
     print("Order 2")
-    assert 9 % local_testing == 9
+    assert 9 % local_testing == 0
 
 
 @pytest.mark.order(1)
