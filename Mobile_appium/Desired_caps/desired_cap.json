@@ -1,0 +1,10 @@
+{
+  "platformName": "android",
+  "uuid": "RZ8N82K8STY",
+  "deviceName": "Samsung Galaxy Note 20",
+  "app": "/Users/hakumar/PycharmProjects/Experiments/Mobile_appium/app_installation_files/app-debug.apk",
+  "noReset": "True",
+  "fullReset": "False",
+  "ignoreHiddenApiPolicyError": "False",
+  "newCommandTimeout": 1000
+}
