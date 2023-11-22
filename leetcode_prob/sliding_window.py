@@ -22,7 +22,6 @@ def sliding_window(given_arr, k_const):
         max_sum = max(window_sum, max_sum)
     print(max_sum)
 
-
 arr = [7, 2, 5, 1, 6, 9, 4]
 k = 3
 sliding_window(arr, k)
