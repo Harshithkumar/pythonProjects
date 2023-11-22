@@ -9,6 +9,7 @@ def sliding_window(given_arr, k_const):
     # Compute sum of first window of size k
     window_sum = sum(arr[:k_const])
 
+
     print("current window sum : ", window_sum)
 
     # Compute sum of first window of size k
