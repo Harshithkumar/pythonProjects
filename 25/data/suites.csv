@@ -1,0 +1,4 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Mon Nov 27 08:28:55 GMT 2023","Mon Nov 27 08:28:55 GMT 2023","1","pytests","test_fixturesvalues","","","","test_modular_3",""
+"passed","Mon Nov 27 08:28:55 GMT 2023","Mon Nov 27 08:28:55 GMT 2023","1","pytests","test_fixturesvalues","","","","test_modular_2",""
+"passed","Mon Nov 27 08:28:55 GMT 2023","Mon Nov 27 08:28:55 GMT 2023","0","pytests","test_fixturesvalues","","","","test_module_1",""
