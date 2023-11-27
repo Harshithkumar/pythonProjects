@@ -1,6 +1,6 @@
 # Python3 code to demonstrate working of
 # Remove K length Duplicates from String
-# Using loop + slicing
+# Using loop + slicing and set and list data structure needed
 
 # initializing strings
 test_str = 'geeksforfreeksfo'
@@ -18,7 +18,7 @@ for idx in range(0, len(test_str) - K):
     # slicing K length substrings
     sub = test_str[idx : idx + K]
 
-    # checking for presence
+    # checking for presence in set and then append it to list
     if sub not in memo:
         memo.add(sub)
         res.append(sub)
