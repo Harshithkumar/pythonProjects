@@ -12,18 +12,21 @@ import os
 # directory = os.path.dirname(os.path.abspath(__file__))
 # print(directory)
 #
-# filename = "touch os_test.txt"
+# filename = "os_test.txt"
 # filepath = os.path.join(directory, filename)
 #
 # cmd = 'touch a_filename.txt'
 # os.system(cmd)
-#
+
+CONFIG_PATH = "os_test.txt"
+config_file = open(CONFIG_PATH)
+print(config_file)
 # print(filepath)
 # with open(filepath, 'w') as file:
 #     file.write("")
 
-
-result = os.scandir()
-for x in result:
-    print(x)
+#
+# result = os.scandir()
+# for x in result:
+#     print(x)
 
