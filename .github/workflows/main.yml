@@ -1,0 +1,32 @@
+
+# name: Appium run on commit
+
+# on: [push]
+
+# jobs:
+#   lint:
+
+#     runs-on: macos-latest
+#     strategy:
+#       matrix:
+#         python-version: [3.8]
+
+#     steps:
+#       - uses: actions/checkout@v2
+#       - name: Set up Python ${{ matrix.python-version }}
+#         uses: actions/setup-python@v4
+#         with:
+#           python-version: ${{ matrix.python-version }}
+#       - name: Install and Run Appium Server
+#         uses: actions/setup-node@v2
+#         with:
+#           node-version: '20.0.0'
+#       - run: |
+#             npm install -g appium@next
+#             appium -v
+#             appium driver install uiautomator2
+#       - name: Install dependencies
+#         working-directory: ./appium_experiments
+#         run: |
+#           pip install -r requirements.txt
+#           python3 pureCompose.py
