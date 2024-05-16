@@ -13,3 +13,5 @@ while i < j:
         i = i + 1
 
 print(arr)
+
+print(sorted(arr))
