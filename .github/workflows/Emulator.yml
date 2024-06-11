@@ -54,11 +54,11 @@ jobs:
         pip install appium-python-client pyyaml
 
     - name: Create AVD
-      run: echo "no" | $HOME/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64"
+      run: echo "no" | $HOME/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64" -c 100M --force
 
     - name: Start emulator
       run: |
-        $HOME/android-sdk/emulator/emulator -avd test -no-audio -no-window &
+        $HOME/android-sdk/emulator/emulator -avd test -no-audio -no-window -gpu off &
         adb wait-for-device
         adb shell input keyevent 82
 
