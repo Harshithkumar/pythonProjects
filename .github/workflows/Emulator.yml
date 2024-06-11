@@ -54,15 +54,15 @@ jobs:
         pip install appium-python-client pyyaml
 
     - name: List available devices
-        run: $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager list device
+      run: $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager list device
 
     - name: Create AVD
       run: |
-      echo "no" | $HOME/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64" -c 100M --force
-      $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager list avd
+       echo "no" | $HOME/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64" -c 100M --force
+       $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager list avd
 
     - name: Start emulator
-        run: |
+      run: |
           $HOME/Library/Android/sdk/emulator/emulator -avd $AVD_NAME -no-snapshot-save -noaudio -no-boot-anim -camera-back none -camera-front none -gpu swiftshader_indirect -no-window -wipe-data &
           for i in {1..60}; do
             if adb devices | grep -q emulator; then
@@ -87,10 +87,10 @@ jobs:
           adb devices # Display list of devices after additional wait
 
     - name: Restart ADB server
-        run: adb kill-server && adb start-server
+      run: adb kill-server && adb start-server
 
     - name: Check emulator status after ADB restart
-        run: |
+      run: |
           sleep 30 # Give some time after restarting ADB server
           adb devices
           adb shell input keyevent 82
