@@ -53,14 +53,47 @@ jobs:
         python -m pip install --upgrade pip
         pip install appium-python-client pyyaml
 
+    - name: List available devices
+        run: $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager list device
+
     - name: Create AVD
-      run: echo "no" | $HOME/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64" -c 100M --force
+      run: |
+      echo "no" | $HOME/android-sdk/cmdline-tools/tools/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64" -c 100M --force
+      $HOME/Library/Android/sdk/cmdline-tools/latest/bin/avdmanager list avd
 
     - name: Start emulator
-      run: |
-        $HOME/android-sdk/emulator/emulator -avd test -no-audio -no-window -gpu off &
-        adb wait-for-device
-        adb shell input keyevent 82
+        run: |
+          $HOME/Library/Android/sdk/emulator/emulator -avd $AVD_NAME -no-snapshot-save -noaudio -no-boot-anim -camera-back none -camera-front none -gpu swiftshader_indirect -no-window -wipe-data &
+          for i in {1..60}; do
+            if adb devices | grep -q emulator; then
+              echo "Emulator is ready"
+              sleep 30
+              adb devices # Display list of devices to get the UDID
+              break
+            fi
+            echo "Waiting for emulator to start..."
+            sleep 10
+          done
+          sleep 30 # Wait for 30 more seconds before checking emulator status
+          for i in {1..6}; do
+            if adb devices | grep -q "emulator-"; then
+              echo "Emulator is online"
+              break
+            fi
+            echo "Waiting for emulator to be online..."
+            sleep 10
+          done
+          sleep 30 # Wait for 30 seconds before checking adb devices again
+          adb devices # Display list of devices after additional wait
+
+      - name: Restart ADB server
+        run: adb kill-server && adb start-server
+
+      - name: Check emulator status after ADB restart
+        run: |
+          sleep 30 # Give some time after restarting ADB server
+          adb devices
+          adb shell input keyevent 82
 
     - name: Wait for emulator to boot
       run: |
