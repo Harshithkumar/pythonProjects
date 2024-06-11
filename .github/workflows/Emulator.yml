@@ -86,10 +86,10 @@ jobs:
           sleep 30 # Wait for 30 seconds before checking adb devices again
           adb devices # Display list of devices after additional wait
 
-      - name: Restart ADB server
+    - name: Restart ADB server
         run: adb kill-server && adb start-server
 
-      - name: Check emulator status after ADB restart
+    - name: Check emulator status after ADB restart
         run: |
           sleep 30 # Give some time after restarting ADB server
           adb devices
