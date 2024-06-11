@@ -55,7 +55,9 @@ jobs:
         pip install appium-python-client pyyaml
 
     - name: Create AVD
-      run: echo "no" | $HOME/android-sdk/cmdline-tools/latest/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64" -c 100M --force
+      run: |
+        mkdir -p $HOME/.android/avd
+        echo "no" | $HOME/android-sdk/cmdline-tools/latest/bin/avdmanager create avd -n test -k "system-images;android-30;default;x86_64" -c 100M --force
 
     - name: List AVDs
       run: $HOME/android-sdk/cmdline-tools/latest/bin/avdmanager list avd
