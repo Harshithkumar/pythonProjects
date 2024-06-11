@@ -1,65 +1,68 @@
-name: Github Actions CI
+name: Android Emulator with Appium
 
-on: push
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
   test:
     runs-on: ubuntu-latest
-    strategy:
-      matrix:
-        api-level: [34]
+
+    services:
+      appium:
+        image: appium/appium
+        options: --entrypoint=sh -c 'appium'
+        ports:
+          - 4723:4723
+
     steps:
-      - name: checkout
-        uses: actions/checkout@v4
+    - name: Checkout repository
+      uses: actions/checkout@v2
 
-      - name: Setup Android SDK
-        uses: Swisyn/setup-android-sdk@v1
+    - name: Set up JDK 11
+      uses: actions/setup-java@v1
+      with:
+        java-version: 11
 
-      - name: Grant execute permission to Gradle wrapper
-        run: chmod +x ./gradlew
+    - name: Set up Android SDK
+      uses: android-actions/setup-android@v2
+      with:
+        api-level: 30
+        build-tools: 30.0.3
+        target: default
+        arch: x86_64
+        profile: no
 
-      - name: Enable KVM
-        run: |
-          echo 'KERNEL=="kvm", GROUP="kvm", MODE="0666", OPTIONS+="static_node=kvm"' | sudo tee /etc/udev/rules.d/99-kvm4all.rules
-          sudo udevadm control --reload-rules
-          sudo udevadm trigger --name-match=kvm
+    - name: Install Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: 3.9
 
-      - name: Install build tools, platform tools, and platform
-        run: |
-          sdkmanager --install 'build-tools;34.0.0' platform-tools 'platforms;android-34'
+    - name: Install dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install appium-python-client pyyaml
 
-      - name: Install latest emulator
-        run: |
-          sdkmanager --install emulator --channel=0
+    - name: Create AVD
+      run: echo "no" | avdmanager create avd -n test -k "system-images;android-30;default;x86_64"
 
-      - name: Install system images
-        run: |
-          sdkmanager --install 'system-images;android-34;default;x86' --channel=0
+    - name: Start emulator
+      run: |
+        $ANDROID_SDK_ROOT/emulator/emulator-headless -avd test -no-audio -no-window &
+        adb wait-for-device
+        adb shell input keyevent 82
 
-      - name: AVD cache
-        uses: actions/cache@v4
-        id: avd-cache
-        with:
-          path: |
-            ~/.android/avd/*
-            ~/.android/adb*
-          key: avd-${{ matrix.api-level }}
+    - name: Wait for emulator to boot
+      run: |
+        adb wait-for-device
+        sleep 30
+        adb shell settings put global window_animation_scale 0
+        adb shell settings put global transition_animation_scale 0
+        adb shell settings put global animator_duration_scale 0
 
-      - name: Create AVD and generate snapshot for caching
-        if: steps.avd-cache.outputs.cache-hit != 'true'
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: ${{ matrix.api-level }}
-          force-avd-creation: false
-          emulator-options: -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: false
-          script: echo "Generated AVD snapshot for caching."
-
-      - name: Run tests
-        uses: reactivecircus/android-emulator-runner@v2
-        with:
-          api-level: ${{ matrix.api-level }}
-          force-avd-creation: false
-          emulator-options: -no-snapshot-save -no-window -gpu swiftshader_indirect -noaudio -no-boot-anim -camera-back none
-          disable-animations: true
-          script: ./gradlew connectedCheck
+    - name: Run tests
+      run: python your_script.py
