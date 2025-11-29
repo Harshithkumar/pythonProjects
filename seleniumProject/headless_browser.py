@@ -24,9 +24,11 @@ def open_browser():
     options.add_experimental_option("excludeSwitches", ["enable-automation"])
     options.add_experimental_option("useAutomationExtension", False)
 
-    # Create driver through webdriver-manager
+    # Use Chromium binary
+    options.binary_location = "/usr/bin/chromium"
+
     driver = webdriver.Chrome(
-        service=Service(ChromeDriverManager().install()),
+        service=Service("/usr/bin/chromedriver"),
         options=options
     )
 
