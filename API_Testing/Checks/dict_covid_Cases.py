@@ -3,8 +3,8 @@ import requests
 import pandas
 import pytest
 
-class Test_matchConfirmedCases:
 
+class Test_matchConfirmedCases:
     URL = 'https://api.covid19api.com/summary'
 
     @pytest.mark.GetURL
@@ -34,8 +34,8 @@ class Test_matchConfirmedCases:
         return list_of_countries, cn_total_confirmedcases
 
     def test_make_Table(self):
-        list_of_countries,cn_total_confirmedcases = Test_matchConfirmedCases.test_Calculate_confirmed_cases(self)
+        list_of_countries, cn_total_confirmedcases = Test_matchConfirmedCases.test_Calculate_confirmed_cases(self)
         global_confirmed_Cases = Test_matchConfirmedCases.test_getGlobalConfirmedCases(self)
-        data_frame = pandas.DataFrame(data=list_of_countries, columns=['each_cn','total_confirmed_Cases'])
+        data_frame = pandas.DataFrame(data=list_of_countries, columns=['each_cn', 'total_confirmed_Cases'])
         print(data_frame.head(10))
         assert global_confirmed_Cases == cn_total_confirmedcases, " Total cofirmed cases not matached"
